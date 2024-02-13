@@ -1,0 +1,282 @@
+body.square-avatars .dcpanelPersonaMenuImg {
+    border-radius: 2px;
+}
+
+#dcactUserImg, .dcpanelPersonaMenuImg {
+    border-radius: 50%;
+    border: 1px solid transparent;
+    outline: 2px solid transparent;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    cursor: pointer;
+}
+
+.dcpanelPersonaMenuImg.default {
+    outline-color: var(--golden);
+}
+
+.dcpanelPersonaMenuImg.selected {
+    outline-color: var(--white70a);
+}
+
+#dcuserpanelPersonaMenu {
+    z-index: 30000;
+    backdrop-filter: blur(var(--SmartThemeBlurStrength));
+    box-shadow: none;
+    --itemsPerRow: 5;
+    --blockWidth: 50px;
+}
+
+body.big-avatars #dcuserpanelPersonaMenu {
+    --blockWidth: 60px;
+}
+
+#dcuserpanelPersonaMenu li {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
+
+body.big-avatars #dcuserpanelPersonaMenu li {
+    width: 60px;
+    height: 90px;
+}
+
+body.big-avatars .dcpanelPersonaMenuImg {
+    border-radius: 10px;
+}
+
+#dcuserpanelPersonaMenu ul {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: calc(var(--itemsPerRow) * var(--blockWidth) + 35px);
+    justify-content: space-around;
+    padding: 5px;
+    gap: 5px;
+    max-height: 75vh;
+    max-height: 75svh;
+    overflow-y: auto;
+}
+
+#dcactUserPic {
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    z-index: 9;
+    bottom: 5px;
+    left: 7px;
+    order: 10;
+}
+
+/* Make room for Hud panel in Nav Panel */
+#rm_characters_block {
+    height: calc(100vh - 88px);
+ }
+ 
+ #rm_ch_create_block {
+    height: calc(100vh - 88px);
+ }
+ 
+ #rm_group_chats_block {
+    height: calc(100vh - 88px);
+    padding-left: 0;
+    padding-right: 0;
+ }
+ 
+ 
+ /* ONLINE TEXT INDICATOR */
+ body:has(.online_status_indicator.success) .HudOnline {
+    font-size: 12px;
+    color: #b5bac1;
+    position: absolute;
+    bottom: 0;
+    margin-left: 56px;
+    margin-bottom: 8px;
+    z-index: 11;
+ }
+ 
+ body:has(.online_status_indicator.success) .HudOffline {
+    display: none;
+ }
+ 
+ /* OFFLINE TEXT INDICATOR */
+ body:not(:has(.online_status_indicator.success)) .HudOffline {
+    font-size: 12px;
+    color: #b5bac1;
+    position: absolute;
+    bottom: 0;
+    margin-left: 56px;
+    margin-bottom: 8px;
+    z-index: 11;
+ }
+ 
+ body:not(:has(.online_status_indicator.success)) .HudOnline {
+    display: none;
+ }
+ 
+ 
+ /* ACTIVE USERNAME TEXT */
+ #HudActiveUsername {
+    font-size: 15px;
+    color: #f2f3f5;
+    position: absolute;
+    bottom: 0;
+    margin-left: 52px;
+    margin-bottom: 25px;
+    z-index: 11;
+ }
+ 
+ /* HUD BACKGROUND COLOR */
+ 
+ #DCHudBackground {
+    margin-left: -5px;
+    background-color: #232428;
+    z-index: 9;
+ }
+ 
+ #right-nav-panel:has(#rm_ch_create_block[style="display: block; opacity: 1;"]) #DCHudBackground {
+    height: 55px !important;
+ }
+ 
+ #right-nav-panel {
+   padding-bottom: 0px;
+ }
+ 
+ /* AVATAR ONLINE DOT COLOR */
+ body:has(.online_status_indicator.success) #DCHudAvatarConnectionStatus {
+     content: "";
+     position: absolute;
+     z-index: 11;
+     left: 38px;
+     bottom: 7px;
+     width: 10px;
+     height: 10px;
+     border-radius: 100%;
+     background-color: #23a55a;
+     outline: #232428 solid 2px;
+ }
+ 
+ /* AVATAR OFFLINE DOT COLOR */
+ body:not(:has(.online_status_indicator.success)) #DCHudAvatarConnectionStatus {
+     content: "";
+     position: absolute;
+     z-index: 11;
+     left: 38px;
+     bottom: 7px;
+     width: 10px;
+     height: 10px;
+     border-radius: 100%;
+     background-color: #b90f14;
+     outline: #232428 solid 2px;
+ }
+ 
+ /* OPTIONS BUTTON */
+ 
+ #options_button {
+      position: absolute;
+      color: #b5bac1;
+      font-size: 20px;
+      left: 197px;
+      bottom: 6px;
+      opacity: unset;
+ }
+ 
+ #options_button:hover {
+      position: absolute;
+      color: #f9f9f9;
+      font-size: 20px;
+      left: 197px;
+      bottom: 8px;
+ }
+ 
+ /* CSSS BUTTON */
+ #dc-csss-button {
+      position: absolute;
+      color: #b5bac1;
+      font-size: 20px;
+      left: 154px;
+      bottom: 12px;
+      opacity: unset;
+      z-index: 10;
+      border: none;
+      background-color: unset;
+ }
+ 
+ #dc-csss-button:hover {
+      position: absolute;
+      color: #f9f9f9;
+      font-size: 20px;
+      left: 154px;
+      bottom: 14px;
+      cursor: pointer;
+ }
+ 
+ 
+ /* AUTHOR'S NOTE BUTTON */
+ 
+ #option_toggle_AN {
+      position: absolute;
+      color: #b5bac1;
+      font-size: 20px;
+      left: 180px;
+      bottom: 14px;
+      opacity: unset;
+      z-index: 10;
+      
+ }
+ 
+ #option_toggle_AN:hover {
+      position: absolute;
+      color: #f9f9f9;
+      font-size: 20px;
+      left: 180px;
+      bottom: 16px;
+      cursor: pointer;
+ }
+ 
+ #right-nav-panel .fa-pen-to-square > i.fa-pen-to-square {
+   display: none;
+ }
+ 
+ span[data-i18n="Author's Note"] {
+   display: none;
+ }
+ 
+ /* SEND FORM ADJUSTMENTS */
+ #send_form {
+    padding: 0 17px;
+    border-radius: 8px;
+ }
+ 
+ #send_form .fa-circle-plus, #send_form .fa-arrow-up-right-from-square, #send_form .fa-arrows-rotate, #send_form .fa-circle-right {
+    font-size: 22px;
+ }
+ 
+ #send_form .fa-circle-plus, #send_form .fa-arrow-up-right-from-square, #send_form .fa-arrows-rotate, #send_form .fa-circle-right, #send_form .fa-circle-stop {
+    font-size: 22px;
+ }
+ 
+ #send_form>#nonQRFormItems>div>div:not(.mes_stop) {
+    height: unset;
+ }
+ 
+ 
+ /* GROUP CHAT PANEL ADJUSTMENTS */
+ 
+ #rm_group_add_members_pagination .paginationjs-nav{
+   position: relative;
+   right: 175px;
+   top: 22px;
+   pointer-events: none;
+ }
+ 
+ #rm_group_chats_block .paginationjs {
+   margin-left: 20px;
+ }
+ 
+ #rm_group_members_pagination .paginationjs-nav{
+    display: none;
+ }
