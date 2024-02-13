@@ -40,23 +40,11 @@ function addCSSSButton() {
     
     const rightNavPanel = document.querySelector('#right-nav-panel');
     rightNavPanel.appendChild(newButton);
-    
+  
     newButton.addEventListener('click', function() {
-      const elements = document.querySelectorAll('.csss--trigger');
-
-      if (elements.length === 0) {
-        executeSlashCommands('/echo title=ERROR severity=warning CSS Snippets Extension not found, install CSS Snippets Extension to use this function.');
-        return;
-      }
-
-      elements.forEach(element => {
-        const clickEvent = new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-          view: window
-        });
-        element.dispatchEvent(clickEvent);
-      });
+      const csssButton = document.querySelector('.csss--trigger')
+  
+      csssButton.click();
     });
   }
 
