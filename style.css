@@ -214,7 +214,10 @@ body.big-avatars .dcpanelPersonaMenuImg {
       cursor: pointer;
  }
  
- 
+body:not(:has(.csss--trigger)) #dc-csss-button {
+  display: none;
+}
+
  /* AUTHOR'S NOTE BUTTON */
  
  #option_toggle_AN {
